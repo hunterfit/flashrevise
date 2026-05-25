@@ -66,13 +66,17 @@ workflows:
           chmod +x node_modules/.bin/cap || true
           npx cap add ios || true
           npx cap sync ios
+      - name: Install CocoaPods
+        script: |
+          cd ios/App
+          pod install
       - name: Set up code signing
         script: |
           xcode-project use-profiles
       - name: Build iOS IPA
         script: |
           xcode-project build-ipa \
-            --project "$XCODE_PROJECT" \
+            --workspace "ios/App/App.xcworkspace" \
             --scheme "$XCODE_SCHEME"
     artifacts:
       - build/ios/ipa/*.ipa
