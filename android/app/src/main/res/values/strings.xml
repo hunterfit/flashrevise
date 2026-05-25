@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">FlashRevise</string>
+    <string name="title_activity_main">FlashRevise</string>
+    <string name="package_name">com.flashrevise.app</string>
+    <string name="custom_url_scheme">com.flashrevise.app</string>
+</resources>
