@@ -49,8 +49,12 @@ workflows:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.flashrevise.app
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
+        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
       groups:
-        - app_store_connect        # Variables : APP_STORE_CONNECT_KEY_IDENTIFIER, etc.
+        - app_store_connect
       vars:
         XCODE_PROJECT: "ios/App/App.xcodeproj"
         XCODE_SCHEME: "App"
@@ -76,10 +80,5 @@ workflows:
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
-    publishing:
-      app_store_connect:
-        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
-        key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
-        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
-        submit_to_testflight: true
-        submit_to_app_store: false
+    # publishing désactivé — upload manuel via App Store Connect Transporter
+    # à réactiver une fois les clés API configurées
