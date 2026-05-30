@@ -81,5 +81,7 @@ workflows:
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
-    # publishing désactivé — upload manuel via App Store Connect Transporter
-    # à réactiver une fois les clés API configurées
+    publishing:
+         app_store_connect:
+           auth: integration
+           submit_to_testflight: true
