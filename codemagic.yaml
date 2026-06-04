@@ -66,6 +66,24 @@ workflows:
           chmod +x node_modules/.bin/cap || true
           npx cap add ios || true
           npx cap sync ios
+      - name: Apply custom app icons (iOS)
+        script: |
+          ICONSET="ios/App/App/Assets.xcassets/AppIcon.appiconset"
+          if [ -d "$ICONSET" ]; then
+            rm -f "$ICONSET"/*.png
+            cp -f ios-icons/*.png "$ICONSET"/
+            cp -f ios-icons/Contents.json "$ICONSET"/Contents.json
+            echo "Custom iOS icons applied:"
+            ls -la "$ICONSET"
+          else
+            echo "ERROR: AppIcon.appiconset not found at $ICONSET"; exit 1
+          fi
+      - name: Set unique build number
+        script: |
+          cd ios/App
+          # CI regenerates the iOS project, so force a unique, increasing build number
+          # to avoid the App Store Connect "build already exists" error on resubmission.
+          agvtool new-version -all $(($BUILD_NUMBER + 1))
       - name: Install CocoaPods
         script: |
           cd ios/App
@@ -81,5 +99,8 @@ workflows:
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
-    # publishing désactivé — upload manuel via App Store Connect Transporter
-    # à réactiver une fois les clés API configurées
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+        # submit_to_app_store: false  # On soumet manuellement depuis App Store Connect

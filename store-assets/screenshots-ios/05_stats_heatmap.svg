@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1290" height="2796" viewBox="0 0 1290 2796">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="phone-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="20"/>
+      <feOffset dx="0" dy="10"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background gradient -->
+  <rect width="1290" height="2796" fill="url(#bg-grad)"/>
+
+  <!-- Marketing headline at top -->
+  <text x="645" y="200" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="110" font-weight="900"
+        fill="white" text-anchor="middle" letter-spacing="-2">Progression visible</text>
+  <text x="645" y="320" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="58" font-weight="500"
+        fill="#c7d2fe" text-anchor="middle">Heatmap, séries, badges</text>
+
+  <!-- Phone frame (iPhone 6.7" mock) -->
+  <g transform="translate(95, 460)" filter="url(#phone-shadow)">
+    <!-- Phone outer body -->
+    <rect width="1100" height="2200" rx="120" ry="120" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="6"/>
+    <!-- Screen -->
+    <rect x="40" y="40" width="1020" height="2120" rx="90" ry="90" fill="#0f172a"/>
+    <!-- Notch / Dynamic Island -->
+    <rect x="430" y="80" width="240" height="60" rx="30" ry="30" fill="#000"/>
+    <!-- App content -->
+    <g transform="translate(40, 40)" clip-path="url(#screen-clip)">
+      <defs>
+        <clipPath id="screen-clip">
+          <rect width="1020" height="2120" rx="90" ry="90"/>
+        </clipPath>
+      </defs>
+      
+      <!-- Header (top bar) -->
+      <rect x="0" y="180" width="1020" height="130" fill="#1e293b"/>
+      <line x1="0" y1="310" x2="1020" y2="310" stroke="#334155" stroke-width="2"/>
+      <rect x="50" y="220" width="60" height="60" rx="16" ry="16" fill="url(#accent-grad)"/>
+      <text x="80" y="262" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="22" font-weight="900" fill="white" text-anchor="middle">FR</text>
+      <text x="130" y="262" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="34" font-weight="700" fill="#e2e8f0">FlashRevise</text>
+      <!-- Streak badge -->
+      <rect x="800" y="225" width="170" height="55" rx="28" ry="28" fill="rgba(251,191,36,0.15)" stroke="rgba(251,191,36,0.35)" stroke-width="2"/>
+      <text x="885" y="263" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="28" font-weight="700" fill="#fbbf24" text-anchor="middle">🔥 12j</text>
+
+      <text x="40" y="450" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="56" font-weight="900" fill="#e2e8f0">Mes statistiques</text>
+      <text x="40" y="510" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="28" fill="#94a3b8">Continue sur ta lancée 🔥</text>
+
+      <!-- Stats cards 2x2 -->
+      <rect x="40" y="570" width="450" height="220" rx="28" ry="28" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <text x="265" y="680" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="100" font-weight="900" fill="#fbbf24" text-anchor="middle">12</text>
+      <text x="265" y="745" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="28" font-weight="600" fill="#94a3b8" text-anchor="middle">jours d'affilée 🔥</text>
+
+      <rect x="510" y="570" width="450" height="220" rx="28" ry="28" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <text x="735" y="680" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="100" font-weight="900" fill="#6366f1" text-anchor="middle">1725</text>
+      <text x="735" y="745" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="28" font-weight="600" fill="#94a3b8" text-anchor="middle">cartes au total</text>
+
+      <rect x="40" y="810" width="450" height="220" rx="28" ry="28" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <text x="265" y="920" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="100" font-weight="900" fill="#10b981" text-anchor="middle">312</text>
+      <text x="265" y="985" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="28" font-weight="600" fill="#94a3b8" text-anchor="middle">cartes maîtrisées</text>
+
+      <rect x="510" y="810" width="450" height="220" rx="28" ry="28" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <text x="735" y="920" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="100" font-weight="900" fill="#8b5cf6" text-anchor="middle">47</text>
+      <text x="735" y="985" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="28" font-weight="600" fill="#94a3b8" text-anchor="middle">sessions ce mois</text>
+
+      <!-- Heatmap -->
+      <text x="40" y="1110" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="32" font-weight="700" fill="#94a3b8" letter-spacing="2">ACTIVITÉ · 15 SEMAINES</text>
+    <rect x="50" y="1160" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="50" y="1222" width="56" height="56" rx="10" ry="10" fill="#334155"/>
+<rect x="50" y="1284" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="50" y="1346" width="56" height="56" rx="10" ry="10" fill="#334155"/>
+<rect x="50" y="1408" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="50" y="1470" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="50" y="1532" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="112" y="1160" width="56" height="56" rx="10" ry="10" fill="#334155"/>
+<rect x="112" y="1222" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="112" y="1284" width="56" height="56" rx="10" ry="10" fill="#334155"/>
+<rect x="112" y="1346" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="112" y="1408" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="112" y="1470" width="56" height="56" rx="10" ry="10" fill="#334155"/>
+<rect x="112" y="1532" width="56" height="56" rx="10" ry="10" fill="#334155"/>
+<rect x="174" y="1160" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="174" y="1222" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="174" y="1284" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="174" y="1346" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="174" y="1408" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="174" y="1470" width="56" height="56" rx="10" ry="10" fill="#334155"/>
+<rect x="174" y="1532" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="236" y="1160" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="236" y="1222" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="236" y="1284" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="236" y="1346" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="236" y="1408" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="236" y="1470" width="56" height="56" rx="10" ry="10" fill="#334155"/>
+<rect x="236" y="1532" width="56" height="56" rx="10" ry="10" fill="#334155"/>
+<rect x="298" y="1160" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="298" y="1222" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="298" y="1284" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="298" y="1346" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="298" y="1408" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="298" y="1470" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="298" y="1532" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="360" y="1160" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="360" y="1222" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="360" y="1284" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="360" y="1346" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="360" y="1408" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="360" y="1470" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="360" y="1532" width="56" height="56" rx="10" ry="10" fill="#334155"/>
+<rect x="422" y="1160" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="422" y="1222" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="422" y="1284" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="422" y="1346" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="422" y="1408" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="422" y="1470" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="422" y="1532" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="484" y="1160" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="484" y="1222" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="484" y="1284" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="484" y="1346" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="484" y="1408" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="484" y="1470" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="484" y="1532" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="546" y="1160" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="546" y="1222" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="546" y="1284" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="546" y="1346" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="546" y="1408" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="546" y="1470" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="546" y="1532" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="608" y="1160" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="608" y="1222" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="608" y="1284" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="608" y="1346" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="608" y="1408" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="608" y="1470" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="608" y="1532" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="670" y="1160" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="670" y="1222" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="670" y="1284" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="670" y="1346" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="670" y="1408" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="670" y="1470" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="670" y="1532" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="732" y="1160" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="732" y="1222" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="732" y="1284" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="732" y="1346" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="732" y="1408" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="732" y="1470" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="732" y="1532" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="794" y="1160" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+<rect x="794" y="1222" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="794" y="1284" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="794" y="1346" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="794" y="1408" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="794" y="1470" width="56" height="56" rx="10" ry="10" fill="#1e3a5f"/>
+<rect x="794" y="1532" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="856" y="1160" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="856" y="1222" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="856" y="1284" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="856" y="1346" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="856" y="1408" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="856" y="1470" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="856" y="1532" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="918" y="1160" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="918" y="1222" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="918" y="1284" width="56" height="56" rx="10" ry="10" fill="#1e4a8a"/>
+<rect x="918" y="1346" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="918" y="1408" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="918" y="1470" width="56" height="56" rx="10" ry="10" fill="#a855f7"/>
+<rect x="918" y="1532" width="56" height="56" rx="10" ry="10" fill="#6366f1"/>
+
+      <!-- Legend -->
+      <text x="50" y="1700" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="22" fill="#94a3b8">Moins</text>
+      <rect x="130" y="1683" width="28" height="28" rx="6" ry="6" fill="#334155"/>
+      <rect x="168" y="1683" width="28" height="28" rx="6" ry="6" fill="#1e4a8a"/>
+      <rect x="206" y="1683" width="28" height="28" rx="6" ry="6" fill="#6366f1"/>
+      <rect x="244" y="1683" width="28" height="28" rx="6" ry="6" fill="#a855f7"/>
+      <text x="290" y="1700" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="22" fill="#94a3b8">Plus</text>
+
+      <!-- Badges -->
+      <text x="40" y="1810" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="32" font-weight="700" fill="#94a3b8" letter-spacing="2">BADGES DÉBLOQUÉS · 8/12</text>
+      <g>
+        <circle cx="120" cy="1900" r="55" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="3"/>
+        <text x="120" y="1920" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="50" text-anchor="middle">🔥</text>
+      </g>
+      <g>
+        <circle cx="250" cy="1900" r="55" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="3"/>
+        <text x="250" y="1920" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="50" text-anchor="middle">🎯</text>
+      </g>
+      <g>
+        <circle cx="380" cy="1900" r="55" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="3"/>
+        <text x="380" y="1920" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="50" text-anchor="middle">⭐</text>
+      </g>
+      <g>
+        <circle cx="510" cy="1900" r="55" fill="rgba(59,130,246,0.2)" stroke="#3b82f6" stroke-width="3"/>
+        <text x="510" y="1920" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="50" text-anchor="middle">💎</text>
+      </g>
+      <g>
+        <circle cx="640" cy="1900" r="55" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="3"/>
+        <text x="640" y="1920" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="50" text-anchor="middle">🏆</text>
+      </g>
+      <g>
+        <circle cx="770" cy="1900" r="55" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="3"/>
+        <text x="770" y="1920" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="50" text-anchor="middle">🚀</text>
+      </g>
+    <rect x="0" y="1960" width="1020" height="160" fill="#1e293b"/>
+<line x1="0" y1="1960" x2="1020" y2="1960" stroke="#334155" stroke-width="2"/>
+<text x="102.0" y="2020" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="46" text-anchor="middle">🏠</text>
+<text x="102.0" y="2070" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="middle">Accueil</text>
+<text x="306.0" y="2020" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="46" text-anchor="middle">📚</text>
+<text x="306.0" y="2070" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="middle">Fiches</text>
+<text x="510.0" y="2020" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="46" text-anchor="middle">⚡</text>
+<text x="510.0" y="2070" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="middle">Modes</text>
+<text x="714.0" y="2020" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="46" text-anchor="middle">📊</text>
+<text x="714.0" y="2070" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="22" font-weight="600" fill="#6366f1" text-anchor="middle">Stats</text>
+<text x="918.0" y="2020" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="46" text-anchor="middle">⚙️</text>
+<text x="918.0" y="2070" font-family="-apple-system, SF Pro Text, Segoe UI, Roboto, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="middle">Réglages</text>
+
+    </g>
+  </g>
+</svg>
