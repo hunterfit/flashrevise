@@ -46,9 +46,6 @@ workflows:
     max_build_duration: 60
     instance_type: mac_mini_m1    # Machine macOS cloud Codemagic
     environment:
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.flashrevise.app
       groups:
         - app_store_connect
       vars:
@@ -90,6 +87,12 @@ workflows:
           pod install
       - name: Set up code signing
         script: |
+          keychain initialize
+          # L'ancien certificat de distribution a été révoqué (31 mai) et Apple n'en a plus.
+          # On en crée un neuf + un profil neuf via l'API App Store Connect.
+          # (Auth API lue automatiquement depuis APP_STORE_CONNECT_ISSUER_ID / _KEY_IDENTIFIER / _PRIVATE_KEY)
+          app-store-connect fetch-signing-files "$BUNDLE_ID" --type IOS_APP_STORE --create
+          keychain add-certificates
           xcode-project use-profiles
       - name: Build iOS IPA
         script: |
