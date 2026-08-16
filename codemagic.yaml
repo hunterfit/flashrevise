@@ -94,12 +94,14 @@ workflows:
           # UMPConsentStatus a ete renomme ConsentStatus -> echec de compilation.
           # On force UMP a rester en 2.x (API compatible avec le plugin).
           perl -0pi -e "s/(target 'App' do)/\$1\n  pod 'GoogleUserMessagingPlatform', '>= 2.0', '< 3.0'/" Podfile
+          # Supprime le lock/Pods mis en cache par un build precedent (qui figeait UMP a 3.1.0)
+          rm -rf Podfile.lock Pods
           echo '----- Podfile apres patch -----'
           cat Podfile
       - name: Install CocoaPods
         script: |
           cd ios/App
-          pod install
+          pod install --repo-update
       - name: Set up code signing
         script: |
           xcode-project use-profiles
