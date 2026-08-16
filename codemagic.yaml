@@ -78,9 +78,11 @@ workflows:
           else
             echo "ERROR: AppIcon.appiconset not found at $ICONSET"; exit 1
           fi
-      - name: Set unique build number
+      - name: Set marketing + build number
         script: |
           cd ios/App
+          # Numéro de version affiché sur l'App Store (doit correspondre à Android 1.2)
+          agvtool new-marketing-version 1.2
           # CI regenerates the iOS project, so force a unique, increasing build number
           # to avoid the App Store Connect "build already exists" error on resubmission.
           agvtool new-version -all $(($BUILD_NUMBER + 1))
