@@ -1,0 +1,24 @@
+# Secrets / signature — NE JAMAIS committer
+*.p12
+*.cer
+*.pem
+*.key
+*.csr
+*.jks
+*.keystore
+keystore.properties
+android/keystore.properties
+
+# Sauvegardes / temporaires
+*.bak
+*.tmp
+*~
+
+# Dépendances / build
+node_modules/
+android/.gradle/
+android/app/build/
+android/build/
+ios/
+build/
+.DS_Store
