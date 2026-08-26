@@ -82,10 +82,24 @@ workflows:
         script: |
           cd ios/App
           # Numéro de version affiché sur l'App Store (doit correspondre à Android 1.2)
-          agvtool new-marketing-version 1.2
+          agvtool new-marketing-version 1.2.1
           # CI regenerates the iOS project, so force a unique, increasing build number
           # to avoid the App Store Connect "build already exists" error on resubmission.
           agvtool new-version -all $(($BUILD_NUMBER + 1))
+      - name: Inject AdMob GADApplicationIdentifier (iOS) — fix crash au lancement
+        script: |
+          cd ios/App
+          # Le SDK Google Mobile Ads exige GADApplicationIdentifier dans Info.plist,
+          # sinon l'app plante immediatement au demarrage. "cap add ios" regenere un
+          # Info.plist par defaut SANS cette cle, donc on l'injecte a chaque build.
+          # Remplace la valeur de test par ton vrai App ID AdMob iOS (apps.admob.com)
+          # en definissant la variable ADMOB_IOS_APP_ID dans Codemagic.
+          APP_ID="${ADMOB_IOS_APP_ID:-ca-app-pub-7199985607613955~7463045244}"
+          PLIST="App/Info.plist"
+          /usr/libexec/PlistBuddy -c "Add :GADApplicationIdentifier string $APP_ID" "$PLIST" \
+            || /usr/libexec/PlistBuddy -c "Set :GADApplicationIdentifier $APP_ID" "$PLIST"
+          echo "GADApplicationIdentifier = $APP_ID"
+          /usr/libexec/PlistBuddy -c "Print :GADApplicationIdentifier" "$PLIST"
       - name: Pin GoogleUserMessagingPlatform to 2.x (fix UMPConsentStatus)
         script: |
           cd ios/App
